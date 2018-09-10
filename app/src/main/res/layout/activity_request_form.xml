@@ -1,0 +1,452 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        android:id="@+id/appBar11">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar11"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".RequestFormActivity"
+        android:layout_below="@+id/appBar11">
+
+        <EditText
+            android:id="@+id/count"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="29dp"
+            android:ems="10"
+            android:hint="Number of Volunteers"
+            android:inputType="number"
+            android:textAlignment="center"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintTop_creator="1" />
+
+        <Spinner
+            android:id="@+id/domains_spinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:spinnerMode="dialog"
+            android:textAlignment="center"
+            tools:layout_constraintRight_creator="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginTop="41dp"
+            app:layout_constraintTop_toBottomOf="@+id/count" />
+
+        <Button
+            android:id="@+id/submitbtn"
+            android:layout_width="0dp"
+            android:layout_height="59dp"
+            android:text="Submit Request"
+            app:layout_constraintBottom_toBottomOf="parent"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            tools:layout_constraintRight_creator="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <CheckBox
+            android:id="@+id/monMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/tuesMorn"
+            app:layout_constraintRight_toRightOf="@+id/tuesMorn"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="1dp"
+            app:layout_constraintLeft_toLeftOf="@+id/tuesMorn"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <TextView
+            android:id="@+id/morning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Morning"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/monMorn"
+            android:layout_marginStart="24dp"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/monday"
+            android:layout_marginLeft="24dp" />
+
+        <TextView
+            android:id="@+id/afternoon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Afternoon"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/monAft"
+            android:layout_marginEnd="111dp"
+            android:layout_marginBottom="1dp"
+            android:layout_marginStart="111dp"
+            app:layout_constraintRight_toRightOf="parent"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toRightOf="@+id/thursday" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/monEve"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <CheckBox
+            android:id="@+id/monAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/tuesAft"
+            android:layout_marginStart="14dp"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/afternoon"
+            android:layout_marginLeft="14dp" />
+
+        <CheckBox
+            android:id="@+id/monEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/tuesEve"
+            android:layout_marginStart="8dp"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintLeft_toLeftOf="@+id/textView3" />
+
+        <CheckBox
+            android:id="@+id/tuesMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/wedMorn"
+            android:layout_marginStart="7dp"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="2dp"
+            app:layout_constraintLeft_toLeftOf="@+id/morning" />
+
+        <CheckBox
+            android:id="@+id/tuesAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/wedAft"
+            app:layout_constraintRight_toRightOf="@+id/monAft"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/monAft"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/tuesEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/wedEve"
+            app:layout_constraintRight_toRightOf="@+id/monEve"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/monEve" />
+
+        <CheckBox
+            android:id="@+id/wedMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/thurMorn"
+            app:layout_constraintRight_toRightOf="@+id/tuesMorn"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/tuesMorn" />
+
+        <CheckBox
+            android:id="@+id/wedAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/thurAft"
+            app:layout_constraintRight_toRightOf="@+id/tuesAft"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/tuesAft"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginBottom="1dp" />
+
+        <CheckBox
+            android:id="@+id/thurMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/friMorn"
+            app:layout_constraintRight_toRightOf="@+id/wedMorn"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/wedMorn" />
+
+        <CheckBox
+            android:id="@+id/friMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/satMorn"
+            app:layout_constraintRight_toRightOf="@+id/thurMorn"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/thurMorn" />
+
+        <CheckBox
+            android:id="@+id/satMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/sunMorn"
+            app:layout_constraintRight_toRightOf="@+id/friMorn"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/friMorn" />
+
+        <CheckBox
+            android:id="@+id/sunMorn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            app:layout_constraintRight_toRightOf="@+id/satMorn"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/satMorn"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/sunday"
+            app:layout_constraintTop_toTopOf="@+id/sunday"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/thurAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/friAft"
+            app:layout_constraintRight_toRightOf="@+id/wedAft"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/wedAft"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/friAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/satAft"
+            app:layout_constraintRight_toRightOf="@+id/thurAft"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/thurAft"
+            app:layout_constraintHorizontal_bias="0.0" />
+
+        <CheckBox
+            android:id="@+id/satAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintRight_toRightOf="@+id/friAft"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/friAft"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintBottom_toTopOf="@+id/sunAft" />
+
+        <CheckBox
+            android:id="@+id/sunAft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintBottom_creator="1"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/satAft"
+            app:layout_constraintBottom_toTopOf="@+id/submitbtn"
+            android:layout_marginBottom="54dp" />
+
+        <CheckBox
+            android:id="@+id/wedEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/thurEve"
+            app:layout_constraintRight_toRightOf="@+id/tuesEve"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/tuesEve" />
+
+        <CheckBox
+            android:id="@+id/thurEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/friEve"
+            app:layout_constraintRight_toRightOf="@+id/wedEve"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/wedEve" />
+
+        <CheckBox
+            android:id="@+id/friEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/satEve"
+            app:layout_constraintRight_toRightOf="@+id/thurEve"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/thurEve" />
+
+        <CheckBox
+            android:id="@+id/satEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/sunEve"
+            app:layout_constraintRight_toRightOf="@+id/friEve"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/friEve"
+            app:layout_constraintHorizontal_bias="1.0" />
+
+        <CheckBox
+            android:id="@+id/sunEve"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toBottomOf="@+id/sunMorn"
+            app:layout_constraintRight_toRightOf="@+id/satEve"
+            app:layout_constraintTop_toTopOf="@+id/sunMorn"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/monday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Monday"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/tuesday"
+            app:layout_constraintRight_toRightOf="@+id/tuesday"
+            android:layout_marginBottom="15dp" />
+
+        <TextView
+            android:id="@+id/tuesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tuesday"
+            tools:layout_constraintRight_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            app:layout_constraintBottom_toTopOf="@+id/wednesday"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintRight_toRightOf="@+id/wednesday"
+            android:layout_marginBottom="17dp" />
+
+        <TextView
+            android:id="@+id/sunday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sunday"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/saturday"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/saturday" />
+
+        <TextView
+            android:id="@+id/saturday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saturday"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintRight_toRightOf="@+id/friday"
+            android:layout_marginTop="14dp"
+            app:layout_constraintTop_toBottomOf="@+id/friday" />
+
+        <TextView
+            android:id="@+id/wednesday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wednesday"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintBottom_creator="1"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/sunAft"
+            android:layout_marginTop="131dp"
+            app:layout_constraintTop_toBottomOf="@+id/domains_spinner"
+            tools:layout_constraintLeft_creator="1"
+            android:layout_marginBottom="130dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
+
+        <TextView
+            android:id="@+id/thursday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thursday"
+            tools:layout_constraintTop_creator="1"
+            android:layout_marginStart="17dp"
+            android:layout_marginTop="13dp"
+            app:layout_constraintTop_toBottomOf="@+id/wednesday"
+            tools:layout_constraintLeft_creator="1"
+            app:layout_constraintLeft_toLeftOf="@+id/wednesday" />
+
+        <TextView
+            android:id="@+id/friday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friday"
+            tools:layout_constraintTop_creator="1"
+            tools:layout_constraintRight_creator="1"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintRight_toRightOf="@+id/thursday"
+            android:layout_marginTop="15dp"
+            app:layout_constraintTop_toBottomOf="@+id/thursday" />
+
+    </android.support.constraint.ConstraintLayout>
+
+
+</RelativeLayout>
+

@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">LetsTeach</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+    <!--For Menus -->
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_home_page_vol">HomePageVol</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string-array name="domains_array">
+        <item></item>
+        <item>Math</item>
+        <item>Java</item>
+        <item>C++</item>
+        <item>English</item>
+        <item>Science</item>
+        <item>History</item>
+        <item>Economics</item>
+    </string-array>
+    <string name="title_activity_request_feed_vol">RequestFeedVol</string>
+    <string name="title_activity_home_page_org">HomePageOrg</string>
+
+</resources>
